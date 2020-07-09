@@ -16,9 +16,9 @@ for (const file of commandFiles) {
 	bot.commands.set(command.name, command);
 }
 
-const token = 'NDUwODc3Nzk3NzA4MDcwOTEy.XvgDEw.748hL4_kJOk5Bu3nzSx_ihIhtwo';
+const token = process.env.token;
 
-const PREFIX = 'l!';
+const PREFIX = process.env.prefix1
 
 var version = '1.0.1';
 
