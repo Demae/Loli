@@ -1,2 +1,2 @@
-web: echo "I don't want a web process"
+web: node index.js
 service: npm start
