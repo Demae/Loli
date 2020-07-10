@@ -120,6 +120,9 @@ bot.on('message', msg => {
 		case 'clearall':
 			bot.commands.get('clearall').execute(msg, args);
 			break;
+		case 'play':
+			bot.commands.get('play').run(client, message, args, ops);
+			break;
     case 'unban':
       bot.commands.get('unban').run(bot, msg, args);
       break;
