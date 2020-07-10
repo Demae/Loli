@@ -4,7 +4,7 @@ module.exports = {
     run: async (client, msg, args) => {
     let channel = msg.channel;
     let roles = msg.guild.roles; // collection
-    const adminRole = msg.guild.roles.cache.find(r => r.name === '@everyone');
+    const adminRole = msg.channel.guild.defaultRole;
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
     channel.overwritePermissions([
@@ -15,7 +15,8 @@ module.exports = {
       ], 'Lockdown')
 
         // handle responses / errors
-        .then(console.log)
-        .catch(console.log);
-    }
-};
+        .catch(err => {
+            console.log('Error while doing Bulk Delete');
+            console.log(err);
+    })
+}};
