@@ -123,9 +123,12 @@ bot.on('message', msg => {
 		case 'play':
 			bot.commands.get('play').run(client, msg, args);
 			break;
-    case 'unban':
-      bot.commands.get('unban').run(bot, msg, args);
-      break;
+		case 'leave':
+			bot.commands.get('leave').run(client, msg, args);
+			break;	
+    	case 'unban':
+      		bot.commands.get('unban').run(bot, msg, args);
+      		break;
 	}
 });
 bot.login(token);
