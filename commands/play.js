@@ -11,7 +11,7 @@ module.exports = {
         if (!validate) return msg.channel.send('Sorry, please input a **valid** url following the command.');
         let info = await ytdl.getInfo(args[1]);
         let connection = await msg.member.voice.channel.join();
-        const stream = ytdl(url, options);
-        const dispatcher = connection.play(stream);
+        let stream = ytdl(args[1])
+        let dispatcher = await connection.play(stream)
         msg.channel.send(`Now playing: ${info.title}`)
     }}
