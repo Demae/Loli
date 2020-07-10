@@ -4,12 +4,12 @@ module.exports = {
     run: async (client, msg, args) => {
     let channel = msg.channel;
     let roles = msg.guild.roles; // collection
-    const adminRole = msg.guild.defaultRole;
+    const adminRole = msg.guild.defaultRole.id;
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
     channel.overwritePermissions([
         {
-           id: adminRole.id,
+           id: adminRole,
            deny: ['SEND_MESSAGES'],
         },
       ], 'Lockdown')
