@@ -132,6 +132,9 @@ bot.on('message', msg => {
 		case 'lock':
 			bot.commands.get('lock').run(client, msg, args);
 			break;
+		case 'unlock':
+			bot.commands.get('unlock').run(client, msg, args);
+			break;
 	}
 });
 bot.login(token);
