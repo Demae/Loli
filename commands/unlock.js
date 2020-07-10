@@ -13,7 +13,8 @@ module.exports = {
            allow: ['SEND_MESSAGES'],
         },
       ], 'Lockdown')
-      msg.channel.send(':unlock: <#channel.id> has been unlocked.')
+      id = msg.channel.id
+      msg.channel.send(`:unlock: <#${id}> has been unlocked.`)
 
         // handle responses / errors
         .catch(err => {
