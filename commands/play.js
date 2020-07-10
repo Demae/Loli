@@ -10,7 +10,7 @@ module.exports = {
         let validate = await ytdl.validateURL(args[1]);
         if (!validate) return msg.channel.send('Sorry, please input a **valid** url following the command.');
         let info = await ytdl.getInfo(args[1]);
-        let connection = await msg.member.voiceChannel.join();
+        let connection = await message.member.voice.channel.join();
         let dispatcher = await connection.play(ytdl(args[1], { filter: 'audioonly' }));
         msg.channel.send(`Now playing: ${info.title}`)
     }}
