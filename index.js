@@ -130,7 +130,7 @@ bot.on('message', msg => {
       		bot.commands.get('unban').run(bot, msg, args);
 			  break;
 		case 'lock':
-			bot.commands.get('lock').execute(msg, args);
+			bot.commands.get('lock').run(client, msg, args);
 			break;
 	}
 });
