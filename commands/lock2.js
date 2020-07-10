@@ -7,12 +7,13 @@ module.exports = {
     const adminRole = msg.guild.roles.cache.find(r => r.name === '@everyone');
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
-    channel.overwritePermissions(
-        adminRole,
-        { 'SEND_MESSAGES': false },
-        // optional 'reason' for permission overwrite
-        'lockdown'
-    )
+    channel.overwritePermissions([
+        {
+           id: adminRole.id,
+           deny: ['SEND_MESSAGES'],
+        },
+      ], 'Lockdown')
+
         // handle responses / errors
         .then(console.log)
         .catch(console.log);
