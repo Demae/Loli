@@ -13,6 +13,7 @@
     "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
     "node": "^14.5.0",
+    "node-gyp": "^7.0.0",
     "node-opus": "^0.3.3",
     "node-pre-gyp": "^0.15.0",
     "opusscript": "0.0.7",
