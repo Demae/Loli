@@ -7,7 +7,7 @@ module.exports = {
     let roles = message.guild.roles; // collection
 
     // find specific role - enter name of a role you create here
-    let testRole = roles.find('name', '<name of role>');
+    let testRole = roles.find('name', '@everyone');
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
     channel.overwritePermissions(
