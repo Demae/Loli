@@ -11,7 +11,7 @@ module.exports = {
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
     channel.overwritePermissions(
-        testRole,
+        testrole,
         { 'SEND_MESSAGES': false },
         // optional 'reason' for permission overwrite
         'closing up shop'
