@@ -13,5 +13,5 @@ module.exports = {
         let connection = await msg.member.voice.channel.join();
         let stream = ytdl(args[1])
         let dispatcher = await connection.play(stream)
-        msg.channel.send(`Now playing: ${info.title}`)
+        msg.channel.send(`Now playing: ${info.videoDetails.title}`)
     }}
