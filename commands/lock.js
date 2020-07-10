@@ -14,7 +14,7 @@ module.exports = {
         },
       ], 'Lockdown')
       id = msg.channel.id
-      msg.channel.send(`:unlock: <#${id}> has been unlocked.`)
+      msg.channel.send(`:unlock: <#${id}> has been locked.`)
 
         // handle responses / errors
         .catch(err => {
