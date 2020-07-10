@@ -3,7 +3,7 @@ const ytdl = require('ytdl-core')
 module.exports = {
     name: 'play',
     description: "play",
-    run: async (client, msg, args, ops) => {
+    run: async (client, msg, args) => {
         if (!msg.member.voiceChannel) return msg.channel.send('Please connect to a voice channel.');
         if (msg.guild.me.voiceChannel) return msg.channel.send('Sorry, the bot is already connect to the guild.');
         if (!args[0]) return msg.channel.send('Sorry, please input a url following the command.');
