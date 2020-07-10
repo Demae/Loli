@@ -1,9 +1,24 @@
 module.exports = {
-    name: 'lock2',
-    description: "lock2",
+    name: 'lock',
+    description: "lock",
     run: async (client, msg, args) => {
-        const type = msg.channel.type === 'text' ? 'SEND_MESSAGES' : 'CONNECT';
-        await msg.channel.overwritePermissions(msg.channel.guild.defaultRole, { [type]: false });
-        if (msg.channel.permissionsFor(msg.guild.me).has('SEND_MESSAGES') === false) return true;
-        return msg.channel.send('This channel is under lockdown.');
-    }}
+    let channel = msg.channel;
+    let roles = msg.guild.roles; // collection
+    const adminRole = msg.guild.roles.everyone.id;
+
+    // overwrites 'SEND_MESSAGES' role, only on this specific channel
+    channel.overwritePermissions([
+        {
+           id: adminRole,
+           deny: ['SEND_MESSAGES'],
+        },
+      ], 'Lockdown')
+      id = msg.channel.id
+      msg.channel.send(`:unlock: <#${id}> has been unlocked.`)
+
+        // handle responses / errors
+        .catch(err => {
+            console.log('Error while doing Bulk Delete');
+            console.log(err);
+    })
+}};
