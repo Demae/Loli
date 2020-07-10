@@ -14,6 +14,7 @@ const discord = require('discord.js');
 const { config } = require('discord.js');
 const fs = require('fs');
 const bot = new discord.Client();
+const music = require('discord.js-music-bot-bluspring');
 
 const client = new discord.Client();
 
@@ -37,6 +38,22 @@ var version = '1.0.1';
 var delete1 = 1;
 
 var delayInMilliseconds = 5000; //1 second
+
+const Music = new music(bot, {
+    ytapi3: "AIzaSyD843csnMv-QsMySX_6tz8SAvy4bphQyLA",
+    prefix: "l!",
+      helpCmd: "gitsomehelp",
+    playCmd: "add",
+    pauseCmd: "stopfornow",
+    stopCmd: "stahp",
+    queueCmd: "gimmedaqueue",
+    npCmd: "whatsplaying",
+    downloadVid: true,
+    resumeCmd: "continue",
+    skipCmd: "switch",
+    loopCmd: "repeat",
+    randomGame: true
+})
 
 bot.on('ready', () => {
 	console.log('This bot is online!');
