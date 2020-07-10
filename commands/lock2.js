@@ -4,7 +4,7 @@ module.exports = {
     run: async (client, msg, args) => {
     let channel = msg.channel;
     let roles = msg.guild.roles; // collection
-    const adminRole = msg.guild.defaultRole.id;
+    const adminRole = msg.guild.roles.everyone.id;
 
     // overwrites 'SEND_MESSAGES' role, only on this specific channel
     channel.overwritePermissions([
