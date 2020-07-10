@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'lock',
-    description: "lock",
+    name: 'lock2',
+    description: "lock2",
     run: async (client, msg, args) => {
         const type = msg.channel.type === 'text' ? 'SEND_MESSAGES' : 'CONNECT';
         await msg.channel.overwritePermissions(msg.channel.guild.defaultRole, { [type]: false });
