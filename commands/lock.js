@@ -3,8 +3,8 @@ module.exports = {
     description: "lock",
     execute(msg, args){
 
-    let channel = message.channel;
-    let roles = message.guild.roles; // collection
+    let channel = msg.channel;
+    let roles = msg.guild.roles; // collection
 
     // find specific role - enter name of a role you create here
     let testRole = roles.find('name', '@everyone');
