@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'lock',
-    description: "lock",
+    name: 'unlock',
+    description: "unlock",
     run: async (client, msg, args) => {
     let channel = msg.channel;
     let roles = msg.guild.roles; // collection
