@@ -13,6 +13,8 @@ module.exports = {
            allow: ['SEND_MESSAGES'],
         },
       ], 'Lockdown')
+      msg.guild.channels.get('channelID').toString();
+      msg.channel.send(':unlock: <#channelID> has been unlocked.')
 
         // handle responses / errors
         .catch(err => {

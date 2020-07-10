@@ -13,6 +13,8 @@ module.exports = {
            deny: ['SEND_MESSAGES'],
         },
       ], 'Lockdown')
+      msg.guild.channels.get('channelID').toString();
+      msg.channel.send(':lock: <#channelID> has been locked.')
 
         // handle responses / errors
         .catch(err => {
